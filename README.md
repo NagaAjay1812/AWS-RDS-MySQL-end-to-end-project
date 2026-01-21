@@ -11,6 +11,32 @@ The objective is to understand:
 ---
 
 ## 🏗️ Architecture
+
+                    Internet
+                        |
+                        |
+            +-------------------------+
+            |     AWS VPC (us-east-1) |
+            |                         |
+            |  Public Subnets         |
+            |  -------------------    |
+            |  Windows EC2            |
+            |  (MySQL Workbench)      |
+            |                         |
+            |  Ubuntu EC2             |
+            |  (Python App)           |
+            |                         |
+            |          |              |
+            |          | MySQL (3306) |
+            |          v              |
+            |  -------------------    |
+            |  RDS MySQL (Multi-AZ)   |
+            |  Primary (AZ-1C)        |
+            |  Standby (AZ-1A)        |
+            |                         |
+            +-------------------------+
+
+
 - AWS RDS MySQL (Multi-AZ enabled)
 - Windows EC2 instance (Database administration)
 - Ubuntu EC2 instance (Application server)
