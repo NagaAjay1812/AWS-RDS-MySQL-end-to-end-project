@@ -78,7 +78,7 @@ Two EC2 instances were created for different roles:
 
 ## 🔹 Step 4: Windows EC2 Configuration
 Inside the Windows instance:
-- Disabled IE Enhanced Security (lab purpose only)
+- Disabled IE Enhanced Security and firewall (lab purpose only) 
 - Installed Google Chrome
 - Installed Visual C++ Redistributable
 - Installed **MySQL Workbench**
@@ -111,7 +111,7 @@ On the Ubuntu server:
 ---
 
 ## 🔹 Step 7: Python Application – Database Connectivity
-A Python script (`app.py`) was created to:
+A Python script (`test_db.py`) was created to:
 - Connect to the same RDS MySQL database
 - Execute SQL queries
 - Read and display movie data
